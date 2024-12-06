@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduAvanza - Simulador de Crédito</title>
+    <style>
+        /* Estilos principales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4e1785;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            height: 90px;
+        }
+        header h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        nav {
+            background-color: #f4f2f6;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4e1785;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4e1785;
+            border-bottom: 2px solid #f4f2f6;
+            padding-bottom: 5px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: #4e1785;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3a1066;
+        }
+        .result {
+            background: #f4f2f6;
+            border-left: 4px solid #4e1785;
+            padding: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #4e1785;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+        a.download-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #4e1785;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a.download-link:hover {
+            background-color: #3a1266;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo de EduAvanza">
+    <h1>EduAvanza</h1>
+    <p>Apoyando el progreso económico y social del Chocó</p>
+</header>
+
+<nav>
+    <a href="#mision">Misión</a>
+    <a href="#vision">Visión</a>
+    <a href="#quienes-somos">¿Quiénes somos?</a>
+    <a href="#simulador">Simulador</a>
+    <a href="#descargas">Descargas</a>
+</nav>
+
+<section id="mision">
+    <h2>Misión</h2>
+    <p>Contribuir al desarrollo económico, educativo y social del departamento del Chocó, ofreciendo soluciones financieras accesibles y sostenibles que promuevan la reducción de la pobreza extrema, fomenten el emprendimiento y brinden oportunidades de mejora en la calidad de vida para sus habitantes.</p>
+</section>
+
+<section id="vision">
+    <h2>Visión</h2>
+    <p>Ser reconocidos como la entidad financiera líder en impacto social en el Chocó para 2030, logrando una región más autosostenible mediante el acceso equitativo a crédito, educación y tecnología, impulsando el progreso económico y humano en el Pacífico colombiano.</p>
+</section>
+
+<section id="quienes-somos">
+    <h2>¿Quiénes somos?</h2>
+    <p>EduAvanza es una iniciativa enfocada en transformar la realidad del Chocó, una región históricamente afectada por desigualdad y pobreza extrema. Nuestro proyecto tiene como objetivo brindar apoyo financiero a través de créditos accesibles y soluciones de ahorro programado, orientados a fortalecer el capital humano, impulsar emprendimientos y fomentar el acceso a educación y vivienda digna.</p>
+</section>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduAvanza - Simulador de Crédito</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4e1785;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4e1785;
+            border-bottom: 2px solid #f4f2f6;
+            padding-bottom: 5px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: #4e1785;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3a1066;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f4f2f6;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simulador de Crédito - EduAvanza</h1>
+    </header>
+    <section>
+        <h2>Formulario de Solicitud de Crédito</h2>
+        <form id="credit-form">
+            <div class="form-group">
+                <label for="full-name">Nombre Completo:</label>
+                <input type="text" id="full-name" placeholder="Ejemplo: Juan Pérez" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Edad:</label>
+                <input type="number" id="age" placeholder="Ejemplo: 30" required>
+            </div>
+            <div class="form-group">
+                <label for="monthly-income">Ingresos Mensuales (COP):</label>
+                <input type="number" id="monthly-income" placeholder="Ejemplo: 1500000" required>
+            </div>
+            <div class="form-group">
+                <label for="monthly-expenses">Gastos Mensuales (COP):</label>
+                <input type="number" id="monthly-expenses" placeholder="Ejemplo: 1000000" required>
+            </div>
+            <div class="form-group">
+                <label for="has-pension">¿Cuenta con pensión?</label>
+                <select id="has-pension" required>
+                    <option value="yes">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="loan-amount">Monto Solicitado (COP):</label>
+                <input type="number" id="loan-amount" placeholder="Ejemplo: 2000000" required>
+            </div>
+            <div class="form-group">
+                <label for="interest-rate">Tasa de Interés Anual (%):</label>
+                <input type="number" id="interest-rate" placeholder="Ejemplo: 12" required>
+            </div>
+            <button type="button" class="btn" onclick="calculateCredit()">Calcular Crédito</button>
+        </form>
+        <div id="result" class="result" style="display: none;"></div>
+    </section>
+    <script>
+        function calculateCredit() {
+            // Obtención de valores del formulario
+            const name = document.getElementById('full-name').value;
+            const age = parseInt(document.getElementById('age').value);
+            const monthlyIncome = parseFloat(document.getElementById('monthly-income').value);
+            const monthlyExpenses = parseFloat(document.getElementById('monthly-expenses').value);
+            const hasPension = document.getElementById('has-pension').value;
+            const loanAmount = parseFloat(document.getElementById('loan-amount').value);
+            const interestRate = parseFloat(document.getElementById('interest-rate').value);
+
+            // Validaciones
+            if (!name || isNaN(age) || isNaN(monthlyIncome) || isNaN(monthlyExpenses) || isNaN(loanAmount) || isNaN(interestRate)) {
+                alert("Por favor, completa todos los campos correctamente.");
+                return;
+            }
+
+            // Cálculo de la capacidad de pago
+            const debtToIncomeRatio = monthlyExpenses / monthlyIncome;
+
+            // Lógica de aprobación del crédito
+            let creditApproval = "Rechazado";
+            if (debtToIncomeRatio < 0.5 && age >= 18 && loanAmount <= monthlyIncome * 5) {
+                creditApproval = "Aprobado";
+            }
+
+            // Mostrar resultados
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = "block";
+            resultDiv.innerHTML = `
+                <strong>Nombre:</strong> ${name}<br>
+                <strong>Edad:</strong> ${age}<br>
+                <strong>Ingresos Mensuales:</strong> COP ${monthlyIncome}<br>
+                <strong>Gastos Mensuales:</strong> COP ${monthlyExpenses}<br>
+                <strong>Cuenta con pensión:</strong> ${hasPension === 'yes' ? 'Sí' : 'No'}<br>
+                <strong>Monto Solicitado:</strong> COP ${loanAmount}<br>
+                <strong>Tasa de Interés:</strong> ${interestRate}%<br>
+                <strong>Resultado:</strong> ${creditApproval}
+            `;
+        }
+    </script>
+</body>
+</html>
+
+
+<section id="descargas">
+    <h2>Descarga de Archivos</h2>
+    <section id="credito100">
+        <h2>Crédito 100%</h2>
+        <a href="credito_100%.xlsx" class="download-link" download>Descargar Crédito 100%</a>
+    </section>
+    <section id="credito50">
+        <h2>Crédito 50%</h2>
+        <a href="credito_50%.xlsx" class="download-link" download>Descargar Crédito 50%</a>
+    </section>
+    <section id="credito30">
+        <h2>Crédito 30%</h2>
+        <a href="credito_30^1.xlsx" class="download-link" download>Descargar Crédito 30%</a>
+    </section>
+    <section id="simulador">
+        <h2>Simulador de Ahorro</h2>
+        <a href="Simulador_de_ahorro.xlsx" class="download-link" download>Descargar Simulador de Ahorro</a>
+    </section>
+    <section id="scoring">
+        <h2>Scoring de Crédito</h2>
+        <a href="scoring_de_credito.xlsx" class="download-link" download>Descargar Scoring de Crédito</a>
+    </section>
+</section>
+
+<footer>
+    <p>&copy; 2024 EduAvanza. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    function calculateScore() {
+        const age = parseInt(document.getElementById('age').value);
+        const income = parseInt(document.getElementById('income').value);
+        const expenses = parseInt(document.getElementById('expenses').value);
+        const pension = document.getElementById('pension').value;
+        const requestedAmount = parseInt(document.getElementById('requested-amount').value);
+
+        let score = 0;
+
+        if (age < 18) score -= 200;
+        else if (age >= 18 && age <= 26) score += 200;
+        else if (age >= 27 && age <= 37) score += 500;
+        else if (age >= 38 && age <= 65) score
+
